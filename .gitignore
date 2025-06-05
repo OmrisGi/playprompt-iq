@@ -1,0 +1,37 @@
+# Node.js dependencies (for both web/ and api/)
+**/node_modules/
+
+# Build output (Next.js and any compiled folder)
+**/web/.next/
+**/api/dist/
+**/api/build/
+
+# Local environment files (keep secrets out of Git)
+**/.env
+**/.env.local
+
+# VS Code settings and Dev Container user overrides
+.vscode/
+**/.devcontainer/devcontainer.json.user
+
+# Docker files that shouldn’t be versioned (if any)
+**/docker-compose.override.yml
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Mac OS metadata (if you’re on macOS)
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Optional: lockfiles (uncomment only if you choose to ignore them,
+# but generally it’s better to commit package-lock.json or pnpm-lock.yaml)
+#
+# /web/package-lock.json
+# /api/package-lock.json
+# pnpm-lock.yaml

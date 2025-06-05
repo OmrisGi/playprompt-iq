@@ -1,0 +1,31 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "PlayPrompt-IQ (Node 20)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "node",
+  "workspaceFolder": "/workspace",
+
+  // Forward the ports you’ll need: 3000 (Next.js) and 3001 (API)
+  "forwardPorts": [3000, 3001],
+
+  // After the container is built, automatically install deps for both the front-end and the back-end.
+  "postCreateCommand": "bash -lc \"cd web && npm install && cd ../api && npm install\"",
+
+  // Optional: VS Code settings inside the container
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  // If you want certain extensions installed automatically inside the container:
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "msjsdiag.vscode-react-native",
+    "GitHub.copilot"
+  ]
+}
